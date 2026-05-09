@@ -25,7 +25,11 @@ public class collection1 {
         ArrayList<Integer> marks = new ArrayList<>();
         marks.ensureCapacity(20);
         System.out.println(marks.isEmpty());
-
+        Iterator<Integer> it = al.iterator();
+        while(it.hasNext()){
+            int  i  = it.next();
+        }
+        System.out.println(al);
 
     }
 }
