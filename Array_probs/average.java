@@ -39,8 +39,9 @@ public class average {
         // System.out.println();
         // System.out.print("Number of Ones in the array is "+ count_one);
         // System.out.println("the first unsorted element in your array is "+ first_unsorted(arr));
-        swap_alternately(arr);
-        print_array(arr);
+        // swap_alternately(arr);
+        // print_array(arr);
+        alternate_extreme(arr);
 
 
     }
@@ -85,6 +86,18 @@ public class average {
             temp = arr[i];
             arr[i]=arr[i+1];
             arr[i+1]=temp;
+        }
+    }
+    public static void alternate_extreme(int arr[]) {
+        int start=0;
+        int end = arr.length-1;
+        while(start<=end){
+            System.out.print(arr[start]+" ");
+            System.out.print(" ");
+            System.out.print(" "+arr[end]);
+            start++;
+            end--;
+
         }
     }
     
