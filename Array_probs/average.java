@@ -41,7 +41,11 @@ public class average {
         // System.out.println("the first unsorted element in your array is "+ first_unsorted(arr));
         // swap_alternately(arr);
         // print_array(arr);
-        alternate_extreme(arr);
+        // alternate_extreme(arr);
+        // reverse_arr(arr);
+        // print_array(arr);
+        shift_by_one(arr);
+        print_array(arr);
 
 
     }
@@ -100,5 +104,24 @@ public class average {
 
         }
     }
-    
+    public static void reverse_arr(int arr[]) {
+        int start=0;
+        int end= arr.length-1;
+        int temp=0;
+        while(start<=end){
+            temp=arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            start++;
+            end--;
+        }
+    }
+    public static void shift_by_one(int arr[]) {
+        int last = arr[arr.length-1];
+        for(int  i= arr.length-1;i>0;i--){
+            arr[i]=arr[i-1];
+        }
+        arr[0]=last;
+
+    }
 }
