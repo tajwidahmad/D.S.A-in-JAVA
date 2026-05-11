@@ -3,9 +3,10 @@ import java.util.*;
 
 public class union {
     public static void main(String[] args) {
-        int arr1[]={1,2,3,4,5};
-        int arr2[]={9,10,11,12};
-        union_of_array(arr1, arr2);
+        int arr1[]={1,2,2,4,5,6,8};
+        int arr2[]={9,11,11,12};
+        // union_of_array(arr1, arr2);
+        union_using_hashset(arr1, arr2);
     }
     public static void union_of_array(int arr1[], int arr2[]) {
         ArrayList <Integer> al = new ArrayList<>();
@@ -23,5 +24,15 @@ public class union {
             System.out.print(i + " ");
 
         }
+    }
+    public static void union_using_hashset(int arr1[], int arr2[]) {
+        HashSet <Integer> hs = new HashSet<>();
+        for(int i : arr1){
+            hs.add(i);
+        }
+        for(int j: arr2){
+            hs.add(j);
+        }
+        System.out.println(hs);
     }
 }
